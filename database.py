@@ -9,7 +9,7 @@ def Register(login, email, password):
         cur.execute(f"SELECT * FROM Users Where Login='{login}';")
         value = cur.fetchall()
         if value != []:
-            MainWindow.Message_Box(text 'User already exists')
+            MainWindow.Message_Box('User already exists')
         else:
             cur.execute(f"INSERT INTO Users VALUES('{login}', '{password}', '{email}')")
         
